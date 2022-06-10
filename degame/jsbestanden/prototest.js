@@ -109,7 +109,7 @@ const questions = [
         ]
     },
     {
-        question: 'This country discovered nuclear fission?',
+        question: 'This country discovered nuclear fission',
         answers: [
         {text: 'A Germany', correct: true},
         {text: 'B America', correct: false},
