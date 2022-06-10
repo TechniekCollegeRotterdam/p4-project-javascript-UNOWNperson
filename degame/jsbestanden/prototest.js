@@ -1,3 +1,9 @@
+// gebruik of engels of nederlandse comments
+// wel goed gebruik gemaakt van de comments 
+// de code ziet er goed overzichtelijk uit
+// de code conventions zijn goed toegepast 
+
+
 //dit is een bestand om een prototype type van het spel te maken en te testen als het testen goed gaat wordt de code hierin gebruikt en bewerkt voor het eind bestand
 
 //To start the game we have to get access to id start-button and question container. 
