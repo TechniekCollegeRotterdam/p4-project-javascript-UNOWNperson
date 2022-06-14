@@ -1,4 +1,4 @@
-//dit is een bestand om een prototype type van het spel te maken en te testen als het testen goed gaat wordt de code hierin gebruikt en bewerkt voor het eind bestand
+//this is a prototype file for testing codes
 
 //To start the game we have to get access to id start-button and question container. 
 //And define a function startGame(), which hides the start button and displays the question container.
@@ -73,7 +73,7 @@ function setNextQuestion() {
       startButton.classList.remove('hide')
     }
   }
-  //this is to show if awser is right or wrong
+  //this is to show if awnser is right or wrong
   function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -82,7 +82,7 @@ function setNextQuestion() {
       element.classList.add('wrong')
     }
   }
-  //this is to remove the right and wrong ellement when player gets the question or moves on to the next one
+  //this is to remove the right and wrong element when player gets the question or moves on to the next one
   function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
@@ -115,6 +115,15 @@ const questions = [
         {text: 'B America', correct: false},
         {text: 'C Russia', correct: false},
         {text: 'D China', correct: false}
+        ]
+    },
+    {
+        question: 'The location of the Eiffel Tower',
+        answers: [
+        {text: 'A Paris', correct: true},
+        {text: 'B New-York', correct: false},
+        {text: 'C Tokyo', correct: false},
+        {text: 'D London', correct: false}
         ]
     }
 ]
