@@ -8,6 +8,9 @@ const nextButton = document.getElementById('next-btn')
 //this is to get acces to the question element
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+//to get acces to score element
+const scoreTracker = document.getElementById('score-tracker')
+const scoreUpElement = document.getElementById('score-up')
 
 //shuffledQuestions will use in shuffling the questions and currentQuestionIndex is for the index of the question
 let shuffledQuestions, currentQuestionIndex
@@ -58,10 +61,11 @@ function resetState() {
   }
 }
 
-//this is to make sure you can click and awnser the question with 
+//this is to make sure you can click and awnser the question with  and to be able to restard the quiz
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
+  processResults(correct)
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -170,3 +174,14 @@ const questions = [{
     ]
   }
 ]
+
+//to add score
+function processResults(isCorrect) {
+  if (!isCorrect) {
+    return
+  }
+  
+  const scoreUp = parseInt(scoreUpElement.textContent, 10) || 0
+
+  scoreUpElement.textContent = scoreUp + 1
+}
