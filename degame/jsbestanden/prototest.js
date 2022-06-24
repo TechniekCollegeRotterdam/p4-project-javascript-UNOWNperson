@@ -1,5 +1,3 @@
-//this is a prototype file for testing codes
-
 //To start the game we have to get access to id start-button and question container. 
 //And define a function startGame(), which hides the start button and displays the question container.
 const startButton = document.getElementById('start-btn')
