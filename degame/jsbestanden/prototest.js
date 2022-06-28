@@ -3,6 +3,7 @@
 const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById('question-container')
 const nextButton = document.getElementById('next-btn')
+const pauseButton = document.getElementById('pause-btn')
 //this is to get acces to the question element
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -13,13 +14,15 @@ const scoreUpElement = document.getElementById('score-up')
 //shuffledQuestions will use in shuffling the questions and currentQuestionIndex is for the index of the question
 let shuffledQuestions, currentQuestionIndex
 
-//a button to start the game and a button to go to the next question
+//a button to start the game and a button to go to the next question and a button to pause the game
 startButton.addEventListener('click', startGame)
 
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+
+pauseButton.addEventListener('click', pauseGame)
 
 function startGame() {
   startButton.classList.add('hide')
@@ -28,6 +31,13 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   setNextQuestion()
+  pauseGame()
+}
+
+//to pause the game
+function pauseGame() {
+  startButton.classList.remove('show')
+  questionContainerElement.classList.add('show')
 }
 
 //this is to make sure that person wil go to the next question

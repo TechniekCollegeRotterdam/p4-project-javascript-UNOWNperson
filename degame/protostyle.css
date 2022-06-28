@@ -130,7 +130,7 @@
     --hue: var(--hue-wrong);
   }
 
-  .start-btn, .next-btn {
+  .start-btn, .next-btn, .pause-btn{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -146,6 +146,11 @@
     display: none;
   }
   
+  .pause-btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
   .score-grid {
     display: flex;
     flex-direction: column;
