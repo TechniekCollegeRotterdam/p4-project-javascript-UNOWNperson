@@ -146,6 +146,11 @@
     display: none;
   }
   
+  .pause-btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
   .score-grid {
     display: flex;
     flex-direction: column;
